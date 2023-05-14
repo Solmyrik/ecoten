@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  display: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+html.lock {
+  overflow: hidden;
+}
+
+body {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+main {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+[class*='__container'] {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.header {
+  background-color: #444444;
+  position: relative;
+}
+
+.header__container {
+  height: 71px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #4b4b4b;
+}
+
+.header__logo img {
+  width: 93px;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 68px;
+}
+
+.header__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header__select span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.header__country {
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .header__burger {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 18px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__body {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background-color: #ffffff;
+    padding: 17px 38px 17px 11px;
+    z-index: 2;
+  }
+  .menu__body.active {
+    display: block;
+  }
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
+}
+
+@media (max-width: 767.98px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+.menu__link {
+  color: #ffffff;
+  font-weight: 500;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+.menu__link:hover {
+  color: #e0114f;
+}
+
+@media (max-width: 767.98px) {
+  .menu__link {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: start;
+  }
+}
+
+.menu__close {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .menu__close {
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+  }
+}
