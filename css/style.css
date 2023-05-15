@@ -472,6 +472,49 @@ main {
   }
 }
 
+.breadcrumbs {
+  position: absolute;
+  bottom: 2px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1280px) {
+  .breadcrumbs {
+    left: 15px;
+  }
+}
+
+.breadcrumbs__name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 28px;
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .breadcrumbs__name {
+    display: block;
+  }
+}
+
+.breadcrumbs__arrow {
+  display: none;
+}
+
+.breadcrumbs__value {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 28px;
+  display: none;
+}
+
 .certificates {
   margin-bottom: 96px;
 }

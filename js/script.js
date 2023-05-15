@@ -21,3 +21,27 @@ function ibg() {
   }
 }
 ibg();
+
+//changeText
+
+const changeText = () => {
+  const texts = document.querySelectorAll('.certificates__text');
+  texts[0].textContent = `В переводе с английского аббревиатура ISO это – «Международная организация стандартизации» (International Organization for Standartization).
+  Эта ор...`;
+  texts[1].textContent = `Всемирная Организация Здравоохранения (ВОЗ), в состав которой входят свыше 180 государств, включая Россию, была создана в 1948 году под эгидой ООН. Она...`;
+  texts[2].textContent = `Всемирная Организация Здравоохранения (ВОЗ), в состав которой входят свыше 180 государств, включая Россию, была создана в 1948 году под эгидой ООН. Она...`;
+  texts[3].textContent = `Всемирная Организация Здравоохранения (ВОЗ), в состав которой входят свыше 180 государств, включая Россию, была создана в 1948 году под эгидой ООН. Она...`;
+};
+
+//resize
+window.addEventListener('resize', (e) => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 767) {
+    changeText();
+  }
+});
+
+const screenWidth = window.innerWidth;
+if (screenWidth < 767) {
+  changeText();
+}
