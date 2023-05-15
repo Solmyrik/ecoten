@@ -419,6 +419,9 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 @media (max-width: 991.98px) {
@@ -434,6 +437,10 @@ main {
     font-size: 20.8px;
     line-height: 18px;
   }
+}
+
+.first__button:hover {
+  opacity: 0.8;
 }
 
 .first__triangle {
@@ -759,10 +766,38 @@ main {
   border-color: #444444;
   max-width: 730px;
   display: none;
+  position: relative;
+  margin-top: -20px;
+}
+
+@media (max-width: 1280px) {
+  .modals__item {
+    padding: 20px 50px 50px 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modals__item {
+    border-width: 0px 1px 1px 1px;
+    padding: 20px 15px 70px 15px;
+  }
 }
 
 .modals__text {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+}
+
+.modals__text a {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000000;
+}
+
+.modals__close {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  cursor: pointer;
 }
