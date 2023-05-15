@@ -747,3 +747,22 @@ main {
     display: none;
   }
 }
+
+.modals__container {
+  padding: 0;
+}
+
+.modals__item {
+  padding: 20px 50px 50px 50px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #444444;
+  max-width: 730px;
+  display: none;
+}
+
+.modals__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
