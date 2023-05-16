@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecoten</title>
+    <link rel="stylesheet" href="choices/choices.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="choices/choices.min.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/modals.js"></script>
   </head>
@@ -21,11 +23,10 @@
           </a>
           <div class="header__right">
             <div class="header__select">
-              <img src="img/arrow.svg" alt="arrow" />
-              <div class="header__country">
-                <img src="img/countries/ru.svg" alt="RU" />
-                <span>RU</span>
-              </div>
+              <select name="" id="choices-images" class="top-calculator__select select-d">
+                <!-- <option value="Ru"></option> -->
+                <!-- <option value="En"></option> -->
+              </select>
             </div>
             <nav class="header__menu menu">
               <div class="menu__body">
@@ -52,21 +53,25 @@
               <img class="first__pc" src="img/main/bg-mob.png" alt="bg" />
             </div>
             <div class="first__content">
-              <h1 class="first__title">
-                Профессионально <br />
-                производим <br />
-                ортопедическую <br />
-                продукцию
-              </h1>
-              <div class="first__button">стандарты качества</div>
+              <div class="first__wrapper">
+                <h1 class="first__title">
+                  Профессионально <br />
+                  производим <br />
+                  ортопедическую <br />
+                  продукцию
+                </h1>
+                <div class="first__button">стандарты качества</div>
+              </div>
             </div>
             <div class="first__triangle">
-              <div class="breadcrumbs">
-                <div class="breadcrumbs__name">СТАНДАРТЫ КАЧЕСТВА</div>
-                <div class="breadcrumbs__arrow">
-                  <img src="img/breadcrumbs/arrow.svg" alt="arrow" />
+              <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs">
+                  <div class="breadcrumbs__name">СТАНДАРТЫ КАЧЕСТВА</div>
+                  <div class="breadcrumbs__arrow">
+                    <img src="img/breadcrumbs/arrow.svg" alt="arrow" />
+                  </div>
+                  <div class="breadcrumbs__value">ISO</div>
                 </div>
-                <div class="breadcrumbs__value">ISO</div>
               </div>
             </div>
           </div>

@@ -45,3 +45,35 @@ const screenWidth = window.innerWidth;
 if (screenWidth < 767) {
   changeText();
 }
+
+//select
+const values = [
+  {
+    value: 'En',
+    label: '<img src="img/countries/ru1.svg"/> En',
+    id: 2,
+  },
+  {
+    value: 'Ru',
+    label: '<img src="img/countries/ru.svg"/> Ru',
+    id: 1,
+    selected: true,
+  },
+];
+const defaultSelect = () => {
+  const element = document.querySelectorAll('.select-d');
+  element.forEach((e, i) => {
+    const choices = new Choices(e, {
+      choices: values,
+      // searchEnabled: true,
+      // searchPlaceholderValue: 'Поиск',
+      placeholder: true,
+      searchEnabled: false,
+      searchPlaceholderValue: '',
+      searchChoices: false,
+      // removeItemButton: true,
+    });
+  });
+};
+
+defaultSelect();
