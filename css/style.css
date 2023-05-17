@@ -87,10 +87,6 @@ input::-webkit-inner-spin-button {
   /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .ibg {
   background-position: center;
   background-size: cover;
@@ -294,6 +290,10 @@ main {
   }
 }
 
+.menu__close img {
+  width: 12px;
+}
+
 .choices {
   width: 95px;
 }
@@ -363,7 +363,7 @@ main {
   position: relative;
   overflow: hidden;
   padding: 0;
-  max-width: 1900px;
+  max-width: 2000px;
 }
 
 .first__bg {
@@ -441,7 +441,6 @@ main {
 
 @media (max-width: 1280px) {
   .first__content {
-    padding: 0px 15px;
     padding-top: 65px;
   }
 }
@@ -594,12 +593,6 @@ main {
   font-size: 15px;
   line-height: 28px;
   display: none;
-}
-
-@media (max-width: 767.98px) {
-  .breadcrumbs__name {
-    display: block;
-  }
 }
 
 .breadcrumbs__arrow {
@@ -888,7 +881,22 @@ main {
 
 .modals__close {
   position: absolute;
-  top: 35px;
-  right: 50px;
+  top: 25px;
+  right: 20px;
   cursor: pointer;
+}
+
+.modals__close img {
+  width: 25px;
+  height: 25px;
+}
+
+.modals__close_g {
+  top: 25px;
+}
+
+@media (max-width: 380px) {
+  .modals .certificates__title {
+    font-size: 16px;
+  }
 }
