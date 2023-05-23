@@ -366,6 +366,29 @@ main {
   max-width: 100%;
 }
 
+@media (max-width: 767.98px) {
+  .first__container {
+    height: calc(100vh - 70px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-height: 550px) and (max-width: 850px) {
+  .first__container {
+    height: auto;
+    display: block;
+  }
+}
+
 .first__bg {
   padding-bottom: 56%;
   width: 100%;
@@ -380,6 +403,13 @@ main {
 @media (max-width: 767.98px) {
   .first__bg {
     margin-top: 320px;
+    height: 50vh;
+  }
+}
+
+@media (max-height: 550px) and (max-width: 850px) {
+  .first__bg {
+    height: auto;
   }
 }
 
@@ -447,9 +477,22 @@ main {
 
 @media (max-width: 767.98px) {
   .first__content {
-    height: 412px;
+    padding-top: 85px;
+    height: 60vh;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 0% 100%);
+  }
+}
+
+@media (max-height: 620px) and (max-width: 850px) {
+  .first__content {
+    padding-top: 50px;
+  }
+}
+
+@media (max-height: 550px) and (max-width: 850px) {
+  .first__content {
+    height: 431px;
   }
 }
 
