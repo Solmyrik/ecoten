@@ -1340,3 +1340,89 @@ main {
 .form button:hover {
   opacity: 0.7;
 }
+
+.footer {
+  background: #444444;
+}
+
+.footer__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 150px;
+}
+
+@media (max-width: 991.98px) {
+  .footer__container {
+    gap: 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer__column p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+.footer__column p span {
+  color: red;
+}
+
+.footer__column a {
+  color: #ffffff;
+}
+
+.footer__column a:hover {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.footer__social {
+  -webkit-transition: opacity 0.6;
+  transition: opacity 0.6;
+}
+
+.footer__social:hover {
+  opacity: 0.6;
+  text-decoration: none !important;
+}
+
+.footer__item {
+  margin-bottom: 12px;
+}
+
+.footer__link {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .footer__none {
+    display: none;
+  }
+}
+
+.footer__mob {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .footer__mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
