@@ -34,17 +34,17 @@ const changeText = () => {
 };
 
 //resize
-window.addEventListener('resize', (e) => {
-  const screenWidth = window.innerWidth;
-  if (screenWidth < 767) {
-    changeText();
-  }
-});
+// window.addEventListener('resize', (e) => {
+//   const screenWidth = window.innerWidth;
+//   if (screenWidth < 767) {
+//     changeText();
+//   }
+// });
 
-const screenWidth = window.innerWidth;
-if (screenWidth < 767) {
-  changeText();
-}
+// const screenWidth = window.innerWidth;
+// if (screenWidth < 767) {
+//   changeText();
+// }
 
 //select
 const values = [

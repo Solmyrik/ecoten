@@ -635,7 +635,6 @@ main {
   font-weight: 600;
   font-size: 15px;
   line-height: 28px;
-  display: none;
 }
 
 .breadcrumbs__arrow {
@@ -663,7 +662,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 83px;
+  gap: 73px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -680,8 +679,8 @@ main {
 
 .certificates__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50% - 42px);
-          flex: 0 1 calc(50% - 42px);
+      -ms-flex: 0 1 calc(33.333% - 49px);
+          flex: 0 1 calc(33.333% - 49px);
   min-height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -730,6 +729,11 @@ main {
           flex: 1 1 auto;
 }
 
+.certificates__text a {
+  text-decoration: underline;
+  color: #000000;
+}
+
 @media (max-width: 991.98px) {
   .certificates__text {
     margin-bottom: 22px;
@@ -743,6 +747,7 @@ main {
   line-height: 28px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  width: 140px;
 }
 
 .certificates__button:hover {
@@ -778,12 +783,6 @@ main {
 
 .catalog__top {
   margin-bottom: 50px;
-}
-
-.catalog__quote {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
 }
 
 .catalog__signature {
@@ -848,9 +847,43 @@ main {
   }
 }
 
+.catalog__item:nth-child(5) .catalog__title {
+  max-width: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .catalog__item:nth-child(5) .catalog__title {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .catalog__item {
     min-height: auto;
+  }
+}
+
+.catalog__quote {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 26px);
+          flex: 0 1 calc(50% - 26px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 34px;
+}
+
+@media (max-width: 991.98px) {
+  .catalog__quote {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 30px;
   }
 }
 
@@ -882,37 +915,25 @@ main {
   }
 }
 
-.modals__container {
-  padding: 0;
-}
-
 .modals__item {
-  padding: 20px 50px 50px 50px;
-  border-width: 1px 1px 1px 1px;
+  padding-top: 20px;
   border-style: solid;
-  border-color: #444444;
-  max-width: 730px;
+  height: 700px;
   display: none;
   position: relative;
   margin-top: -20px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 991.98px) {
   .modals__item {
-    padding: 20px 50px 50px 15px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .modals__item {
-    border-width: 0px 1px 1px 1px;
-    padding: 20px 15px 70px 15px;
+    height: auto;
+    padding-bottom: 50px;
   }
 }
 
 .modals__text {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -942,4 +963,13 @@ main {
   .modals .certificates__title {
     font-size: 16px;
   }
+}
+
+.modals__img {
+  margin-top: 50px;
+}
+
+.modals__img img {
+  width: 252px;
+  height: 102px;
 }
