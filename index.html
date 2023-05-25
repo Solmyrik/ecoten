@@ -267,18 +267,30 @@
           <div class="form__container">
             <h2 class="form__title">Обратная связь:</h2>
             <form action="" class="form__form">
-              <input type="text" name="name" id="" placeholder="Как вас зовут" />
-              <input type="text" name="email" id="" placeholder="E-mail для ответа" />
+              <input
+                class="form__input"
+                type="text"
+                name="name"
+                id=""
+                placeholder="Как вас зовут"
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="email"
+                id=""
+                placeholder="E-mail для ответа"
+              />
               <textarea
                 name=""
                 cols="30"
                 rows="10"
                 placeholder="Ваш вопрос, претензия или предложение"
               ></textarea>
-              <label for="file"
+              <label for="file" class="form__file"
                 ><input type="file" name="file" id="file" /><span>ПРИЛОЖИТЬ ФАЙЛЫ</span></label
               >
-              <button type="submit">Отправить</button>
+              <button type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button>
             </form>
           </div>
         </section>
@@ -342,7 +354,61 @@
           </div>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__column">
+            <p>© 2023. ООО «Фигуро»</p>
+            <p>★ Москва</p>
+            <a href="mailto:ask@figuro.me">📧 ask@figuro.me</a>
+            <div class="footer__socials">
+              <a href="" class="footer__social">
+                <img src="img/footer/email.svg" alt="email" />
+              </a>
+              <a href="" class="footer__social">
+                <img src="img/footer/tele.svg" alt="telegram" />
+              </a>
+              <a href="" class="footer__social">
+                <img src="img/footer/inst.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__menu">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="" class="footer__link">Материалы для обработки</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Цены на лазерную резку</a>
+                </li>
+                <li class="footer__item"><a href="" class="footer__link">Способы доставки</a></li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Условия и способы оплаты</a>
+                </li>
+                <li class="footer__item"><a href="" class="footer__link">Гарантии возврата</a></li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Условия предоставления сервиса</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__menu">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="" class="footer__link">Требования к макетам</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Софт, статьи и бесплатные макеты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
