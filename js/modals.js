@@ -5,15 +5,16 @@ const modals = document.querySelectorAll('.modals__item');
 const certificatesButton = document.querySelectorAll('.certificates__button');
 const modalsClose = document.querySelectorAll('.modals__close');
 const modalsContainer = document.querySelector('.modals__container');
+const sectionsNone = document.querySelectorAll('.modal-none');
 
 const breadcrumbsArrow = document.querySelector('.breadcrumbs__arrow');
 const breadcrumbsValue = document.querySelector('.breadcrumbs__value');
 
 certificatesButton.forEach((e, i) => {
   e.addEventListener('click', (element) => {
-    certificates.style.display = 'none';
-    about.style.display = 'none';
-    catalog.style.display = 'none';
+    sectionsNone.forEach((e) => {
+      e.style.display = 'none';
+    });
     modals[i].style.display = 'block';
     breadcrumbsArrow.style.display = 'block';
     breadcrumbsValue.style.display = 'block';
@@ -26,9 +27,9 @@ certificatesButton.forEach((e, i) => {
 });
 
 const closes = () => {
-  certificates.style.display = 'block';
-  about.style.display = 'block';
-  catalog.style.display = 'block';
+  sectionsNone.forEach((e) => {
+    e.style.display = 'block';
+  });
   breadcrumbsArrow.style.display = 'none';
   breadcrumbsValue.style.display = 'none';
   const screenWidth = window.innerWidth;
@@ -39,9 +40,6 @@ const closes = () => {
 
     console.log('ok');
   }, 10);
-  // if (screenWidth < 767) {
-  //   breadcrumbsName.style.display = 'block';
-  // }
   modals.forEach((e) => {
     e.style.display = 'none';
   });

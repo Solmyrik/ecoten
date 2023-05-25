@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выбор города</title>
+    <link rel="stylesheet" href="choices/choices.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="choices/choices.min.js"></script>
+    <script defer src="js/cities.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__burger">
+          <img src="img/burger.svg" alt="burger" />
+        </div>
+        <div class="header__container">
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="logo" />
+          </a>
+          <div class="header__right">
+            <div class="header__select">
+              <select name="" id="choices-images" class="top-calculator__select select-d">
+                <!-- <option value="Ru"></option> -->
+                <!-- <option value="En"></option> -->
+              </select>
+            </div>
+            <nav class="header__menu menu">
+              <div class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="#about" class="menu__link">О нас</a></li>
+                  <li class="menu__item"><a href="#catalog" class="menu__link">Каталог</a></li>
+                  <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+                </ul>
+                <div class="menu__close">
+                  <img src="img/close.svg" alt="close" />
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="cities">
+          <div class="cities__container">
+            <div class="cities__top">
+              <div class="cities__change">
+                <p>Выберите город:</p>
+                <img src="img/cities/local.svg" alt="local" />
+                <span>САНКТ-ПЕТЕРБУРГ</span>
+              </div>
+              <div class="cities__triggers">
+                <div class="cities__trigger">
+                  <p>Списком</p>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 8C10 7.44772 10.4477 7 11 7H27C27.5523 7 28 7.44772 28 8C28 8.55228 27.5523 9 27 9H11C10.4477 9 10 8.55228 10 8Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 16C10 15.4477 10.4477 15 11 15H27C27.5523 15 28 15.4477 28 16C28 16.5523 27.5523 17 27 17H11C10.4477 17 10 16.5523 10 16Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 24C10 23.4477 10.4477 23 11 23H27C27.5523 23 28 23.4477 28 24C28 24.5523 27.5523 25 27 25H11C10.4477 25 10 24.5523 10 24Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M5.5 9.5C6.32843 9.5 7 8.82843 7 8C7 7.17157 6.32843 6.5 5.5 6.5C4.67157 6.5 4 7.17157 4 8C4 8.82843 4.67157 9.5 5.5 9.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M5.5 17.5C6.32843 17.5 7 16.8284 7 16C7 15.1716 6.32843 14.5 5.5 14.5C4.67157 14.5 4 15.1716 4 16C4 16.8284 4.67157 17.5 5.5 17.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M5.5 25.5C6.32843 25.5 7 24.8284 7 24C7 23.1716 6.32843 22.5 5.5 22.5C4.67157 22.5 4 23.1716 4 24C4 24.8284 4.67157 25.5 5.5 25.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <div class="cities__trigger active">
+                  <p>На карте</p>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4 6C4 4.89543 4.89543 4 6 4H26C27.1046 4 28 4.89543 28 6V26C28 27.1046 27.1046 28 26 28H6C4.89543 28 4 27.1046 4 26V6ZM26 6H6V26H26V6Z"
+                      fill="#8F8F8F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.2276 13.5694C20.4722 13.4669 20.7348 13.4142 21 13.4142C21.2652 13.4142 21.5278 13.4669 21.7724 13.5694C22.0157 13.6712 22.2363 13.8201 22.4217 14.0075L27.7071 19.2929C28.0976 19.6834 28.0976 20.3166 27.7071 20.7071C27.3166 21.0976 26.6834 21.0976 26.2929 20.7071L21 15.4142L20.9946 15.4196L15.4218 20.9924C15.2364 21.1798 15.0157 21.3288 14.7724 21.4307C14.5278 21.5331 14.2652 21.5858 14 21.5858C13.7348 21.5858 13.4722 21.5331 13.2276 21.4307C12.9843 21.3288 12.7636 21.1798 12.5781 20.9923L9.99998 18.4142L9.99463 18.4196L5.70711 22.7071C5.31658 23.0976 4.68342 23.0976 4.29289 22.7071C3.90237 22.3166 3.90237 21.6834 4.29289 21.2929L8.57815 17.0076C8.7636 16.8202 8.9843 16.6712 9.22757 16.5694C9.4722 16.4669 9.73478 16.4142 10 16.4142C10.2652 16.4142 10.5278 16.4669 10.7724 16.5694C11.0157 16.6712 11.2364 16.8202 11.4219 17.0077L14 19.5858L14.0054 19.5804L19.5782 14.0076C19.7636 13.8202 19.9843 13.6712 20.2276 13.5694Z"
+                      fill="#8F8F8F"
+                    />
+                    <path
+                      d="M12.5 13C13.3284 13 14 12.3284 14 11.5C14 10.6716 13.3284 10 12.5 10C11.6716 10 11 10.6716 11 11.5C11 12.3284 11.6716 13 12.5 13Z"
+                      fill="#8F8F8F"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cities__map">
+              <img src="img/cities/map.png" alt="map" />
+            </div>
+            <div class="cities__body">
+              <div class="cities__onmap active">
+                <div class="cities__alphabet">
+                  <div class="cities__letter">А</div>
+                  <div class="cities__letter">б</div>
+                  <div class="cities__letter">в</div>
+                  <div class="cities__letter">г</div>
+                  <div class="cities__letter">д</div>
+                  <div class="cities__letter">у</div>
+                  <div class="cities__letter">ж</div>
+                  <div class="cities__letter">з</div>
+                  <div class="cities__letter">и</div>
+                  <div class="cities__letter">й</div>
+                  <div class="cities__letter">к</div>
+                  <div class="cities__letter">л</div>
+                  <div class="cities__letter">м</div>
+                  <div class="cities__letter">н</div>
+                  <div class="cities__letter">о</div>
+                  <div class="cities__letter">п</div>
+                  <div class="cities__letter">р</div>
+                  <div class="cities__letter">с</div>
+                  <div class="cities__letter">т</div>
+                  <div class="cities__letter">у</div>
+                  <div class="cities__letter">ф</div>
+                  <div class="cities__letter">х</div>
+                  <div class="cities__letter">ч</div>
+                  <div class="cities__letter">ш</div>
+                  <div class="cities__letter">э</div>
+                  <div class="cities__letter">ю</div>
+                  <div class="cities__letter">я</div>
+                </div>
+                <div class="cities__city">
+                  <div class="cities__column">
+                    <p>Агрыз</p>
+                    <p>Армавир</p>
+                    <p>Асбест</p>
+                  </div>
+                  <div class="cities__column">
+                    <p>Адлер</p>
+                    <p>Алматы</p>
+                    <p>Армянск</p>
+                  </div>
+                  <div class="cities__column">
+                    <p>Азнакаево</p>
+                    <p>Алушта</p>
+                    <p>Астрахань</p>
+                  </div>
+                  <div class="cities__column">
+                    <p>Азов</p>
+                    <p>Альметьевск</p>
+                    <p>Артем</p>
+                  </div>
+                  <div class="cities__column">
+                    <p>Александров</p>
+                    <p>Ангарск</p>
+                    <p>Ачинск</p>
+                  </div>
+                  <div class="cities__column">
+                    <p>Анадырь</p>
+                    <p>Апатиты</p>
+                    <p>Апрелевка</p>
+                  </div>
+                </div>
+                <div class="cities__map cities__map_mob">
+                  <img src="img/cities/map.png" alt="map" />
+                </div>
+              </div>
+              <div class="cities__list list-cities">
+                <div class="list-cities__column">
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Сеть магазинов Медтехника СПБ</h4>
+                    <a href="medtech-shop.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>medtech-shop.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>
+                        ул. Боткинская 1, лит. Б, м. «Площадь Ленина» Исследовательское (выход на
+                        ул. Боткинская),
+                      </p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 334-14-94">8(812) 334-14-94</a>
+                        <span>,</span>
+                        <a href="tel: 8(921) 997-29-84"> 8(921) 997-29-84</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пер. Гривцова 24, м. «Садовая»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 334-14-94">8(812) 334-14-94</a>
+                        <span>,</span>
+                        <a href="tel:8(921) 930-33-62">8(921) 930-33-62</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Уточкина 1, м. «Комендантский проспект»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 931-44-59">8(812) 931-44-59</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Оптиков 54,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 303-37-58">8(812) 303-37-58</a>
+                        <span>,</span>
+                        <a href="tel:8(812) 931-44-59">8(812) 931-44-59</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>Мурино, ул. Тихая 14, м. «Девяткино»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 334-14-94">8(812) 334-14-94</a>
+                        <span>,</span>
+                        <a href="tel:8(921) 903-69-14">8(921) 903-69-14</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Ортопедический магазин «Ортелия»</h4>
+                    <a href="orteliya.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>orteliya.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>ул. Народная 33,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(911) 010-45-38">8(911) 010-45-38</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>Балканская площадь 5,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 988-23-17">8(812) 988-23-17</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Коломяжский 28, корп.1,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(950) 043-89-41">8(950) 043-89-41</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Сикейроса д.10, корп.4,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 988-23-13">8(812) 988-23-13</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>Лыжный пер. д.6,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(951) 661-17-59">8(951) 661-17-59</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Индустриальный 19,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(953) 367-18-07">8(953) 367-18-07</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Будапештская 11, лит. А,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(950) 007-13-53">8(950) 007-13-53</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Ветеранов 140,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(911) 789-28-43">8(911) 789-28-43</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">«Оптика&Ортопедия»</h4>
+                    <div class="list-cities__element">
+                      <p>пр. Индустриальный 11, корп.1,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(904) 510-52-44">8(904) 510-52-44</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">«Радуга Здоровья»</h4>
+                    <div class="list-cities__element">
+                      <p>ул. Бестужевская 10, лит. А,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(952) 209-46-73">8(952) 209-46-73</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Ортопедический салон «Орто Точка»</h4>
+                    <div class="list-cities__element">
+                      <p>Петергоф, Бульвар Красных Курсантов 63, корп. 3,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(911) 714-30-19">8(911) 714-30-19</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-cities__column">
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Ортопедический салон «Ecoteka»</h4>
+                    <a href="ecoteka.spb.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>ecoteka.spb.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>пр. Науки 21, корп.1,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(981) 990-20-27">8(981) 990-20-27</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Просвещения 30, корп.4,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(981) 990-20-06">8(981) 990-20-06</a>
+                        <span><br /></span>
+                        <a href="tel:8(911) 712-09-38">8(911) 712-09-38 (служба доставки)</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Ортопедический салон «Добрый Ортопед»</h4>
+                    <a href="dobriyortoped.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>dobriyortoped.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>пр. Науки 8, корп.1, м. «Академическая», ,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812)317-17-49">8(812)317-17-49</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Стрельбищенская 16, м. «Бухарестская»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812)448-08-79">8(812)448-08-79</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Наличная 49, м. «Приморская»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812)317-60-69">8(812)317-60-69</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Испытателей 6, корп. 1, м. «Пионерская»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 317-73-40">8(812) 317-73-40</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Аптека «Первая Помощь»</h4>
+                    <a href="aptekapp.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>aptekapp.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>пр.Пятилеток 2,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(800)200-03-08">8(800)200-03-08</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Ленинский 90,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(800)200-03-08">8(800)200-03-08</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>пр. Обуховской обороны 229,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812)362-73-81">8(812)362-73-81</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Аптека «Медика»</h4>
+                    <div class="list-cities__element">
+                      <p>пр. Тореза 72,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 292-29-89">8(812) 292-29-89</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-cities__item">
+                    <h4 class="list-cities__name">Ортопедические салоны «ДОБРЫНЯ»</h4>
+                    <a href="dobrinya.tiu.ru" class="list-cities__global">
+                      <img src="img/cities/globe.svg" alt="globe" />
+                      <p>dobrinya.tiu.ru</p>
+                    </a>
+                    <div class="list-cities__element">
+                      <p>ул. Елицкая 3, м. «Удельная»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 627-62-42">8(812) 627-62-42</a>
+                        <span>,</span>
+                        <a href="tel:8(800) 555-07-96">8(800) 555-07-96</a>
+                        <span>,<br /></span>
+                        <a href="tel:8(812) 922-78-49">8(812) 922-78-49</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Колонтай 17, корп.2,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 627-62-42">8(812) 627-62-42</a>
+                        <span>,</span>
+                        <a href="tel:8(800) 555-07-96"> 8(800) 555-07-96</a>
+                        <span>,<br /></span>
+                        <a href="tel:8(812) 925-57-41">8(812) 925-57-41</a>
+                      </div>
+                    </div>
+                    <div class="list-cities__element">
+                      <p>ул. Алтайская 14, м. «Московская»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 627-62-42">8(812) 627-62-42</a>
+                        <span>,</span>
+                        <a href="tel:8(812) 943-65-52">8(812) 943-65-52</a>
+                        <span>,<br /></span>
+                        <a href="tel:8(800) 555-07-96">8(800) 555-07-96</a>
+                      </div>
+                    </div>
+
+                    <div class="list-cities__element">
+                      <p>пер. Саперный 14, м. «Чернышевская»,</p>
+                      <div class="list-cities__phones">
+                        <a href="tel:8(812) 627-62-42">8(812) 627-62-42</a>
+                        <span>,</span>
+                        <a href="tel:8(812) 273-18-52">8(812) 273-18-52</a>
+                        <span>,<br /></span>
+                        <a href="tel:8(800)555-07-96">8(800)555-07-96</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
