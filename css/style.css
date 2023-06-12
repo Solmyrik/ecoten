@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;800&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -784,6 +784,130 @@ main {
   line-height: 22px;
 }
 
+.new-about {
+  margin-bottom: 76px;
+}
+
+@media (max-width: 767.98px) {
+  .new-about {
+    margin-bottom: 50px;
+  }
+}
+
+.new-about__title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 34px;
+}
+
+.new-about__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+@media (max-width: 991.98px) {
+  .new-about__body {
+    display: block;
+  }
+}
+
+.new-about__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+}
+
+@media (max-width: 991.98px) {
+  .new-about__item:first-child .new-about__top {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .new-about__item:last-child .new-about__bottom {
+    border: 0;
+    padding-bottom: 0;
+  }
+}
+
+.new-about__top {
+  min-height: 135px;
+  border-bottom: 1px solid #a2622a;
+}
+
+@media (max-width: 991.98px) {
+  .new-about__top {
+    min-height: 100%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+}
+
+.new-about__name {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 22px;
+  color: #a2622a;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 767.98px) {
+  .new-about__name {
+    font-size: 26px;
+    line-height: 22px;
+  }
+}
+
+.new-about__text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.new-about__text a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+@media (max-width: 767.98px) {
+  .new-about__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+.new-about__bottom {
+  padding-top: 33px;
+}
+
+@media (max-width: 991.98px) {
+  .new-about__bottom {
+    border-bottom: 1px solid #a2622a;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.new-about__bigtext {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .new-about__bigtext_m {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: lowercase;
+  }
+}
+
 .catalog {
   padding-bottom: 70px;
 }
@@ -1125,7 +1249,26 @@ main {
 }
 
 .contacts__content {
-  max-width: 450px;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991.98px) {
+  .contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contacts__item {
@@ -1157,6 +1300,10 @@ main {
   .contacts__item {
     margin-bottom: 25px;
   }
+}
+
+.contacts__item p {
+  margin-bottom: 11px;
 }
 
 .contacts__icon {
@@ -1348,16 +1495,19 @@ main {
 
 .footer {
   background: #444444;
+  border-top: 8px solid #e0114f;
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    border-top: 4px solid #e0114f;
+  }
 }
 
 .footer__container {
   padding-top: 50px;
   padding-bottom: 50px;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 150px;
 }
 
 @media (max-width: 991.98px) {
@@ -1368,6 +1518,10 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.footer__column:first-child {
+  margin-bottom: 20px;
 }
 
 .footer__column p {
@@ -1414,22 +1568,8 @@ main {
   color: #ffffff;
 }
 
-@media (max-width: 991.98px) {
-  .footer__none {
-    display: none;
-  }
-}
-
-.footer__mob {
-  display: none;
-}
-
-@media (max-width: 991.98px) {
-  .footer__mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.footer__none {
+  text-decoration: underline;
 }
 
 .cities {
